@@ -138,7 +138,7 @@ export default async function Dashboard() {
           data={dataPie}
         />
         <div className="grid gap-2 md:col-span-1 col-span-2 mx-4 md:mx-0">
-          {dataPie.map((d:any, index: number)=>(<div className='flex'>
+          {dataPie.map((d:any, index: number)=>(<div className='flex'key={"piedata"+index}>
             <div className={`w-4 h-4 rounded-full m-1`} style={{ backgroundColor : COLORS[index % COLORS.length] }}>{" "}</div>
             <div className="">
               <h3 className=' font-bold p-0' >{d["title"]}</h3>
@@ -155,7 +155,7 @@ export default async function Dashboard() {
           <div className="text-slate-400 font-light text-sm">See all {">"}</div>
         </div>
         <div className="px-8 pb-8 pt-0">
-          {dataTasks.map(d=>(<div
+          {dataTasks.map((d, index)=>(<div key={"taskdata"+index}
             className={` border-l-[5px] py-1 px-4 grid my-4 gap-1`}
             style={{ borderColor : d["col"] }}
           >
