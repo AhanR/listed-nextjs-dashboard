@@ -1,3 +1,4 @@
+/* eslint react/no-unescaped-entities */
 import React, { useState } from 'react'
 import Card from './components/card';
 import revenue from '../icons/revenue.svg'

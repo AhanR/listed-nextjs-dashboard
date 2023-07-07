@@ -1,3 +1,4 @@
+/* eslint react/no-unescaped-entities */
 'use client'
 import { useRouter } from 'next/navigation'
 
